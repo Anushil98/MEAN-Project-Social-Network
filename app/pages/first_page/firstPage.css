@@ -1,0 +1,26 @@
+header{
+    display: block;
+    align-content: center;
+}
+div{
+    /* background-color: green;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 30%;
+    height: 30px; */
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 1rem;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 7rem;
+    opacity: 0.9;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin: 0 auto;
+}

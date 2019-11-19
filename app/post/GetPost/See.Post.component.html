@@ -1,0 +1,12 @@
+<header>
+    <a routerLink='/student/homepage'>
+        Profile
+    </a>
+</header>
+<h1>Posts</h1>
+<div *ngFor="let c of Post">
+    <h3>{{c.title}}</h3>
+    <p>{{c.content}}</p>
+    <button (click)="like(c.id)">Like </button>
+    <p>{{c.likes}}</p>
+</div>

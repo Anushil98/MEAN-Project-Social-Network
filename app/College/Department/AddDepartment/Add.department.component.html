@@ -1,0 +1,18 @@
+<header>
+  <a routerLink='/college/homePage'>home Page</a>
+</header>
+<div>
+  <form (submit)="OnAddDepartment(DepartmentForm)" #DepartmentForm="ngForm" style="border:1px solid #ccc">
+    <div class="container">
+      <h1>Add Department</h1>
+      <hr>
+
+      <label for="name"><b>Enter Name</b></label><br>
+      <input type="text" ngModel name="name" placeholder="Enter the content" rows=4 required #name="ngModel">
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Add Department</button>
+      </div>
+    </div>
+  </form>
+</div>

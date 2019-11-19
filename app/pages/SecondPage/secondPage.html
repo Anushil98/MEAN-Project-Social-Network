@@ -1,0 +1,29 @@
+<header>
+
+    <a routerLink='/student/addAchievement'>
+        Add Achievement
+    </a>
+    <a routerLink='/student/addPost'>
+        Add Post
+    </a>
+    <a routerLink='/student/seePost'>
+        See {{user}}'s post
+    </a>
+    <a routerLink='/student/profilePic'>
+        Add Profile Picture And Other Details
+    </a>
+    <a routerLink='/student/file/upload'>
+        Upload A File
+    </a>
+    <a  *ngIf="view!==' '" routerLink='/college/homePage'>View College</a>
+</header>
+<br>
+<div>
+    <Search-Component></Search-Component>
+</div>
+<div>
+    <See-Achievement-component></See-Achievement-component>
+</div>
+<div>
+    <See-Feed-Component></See-Feed-Component>
+</div>

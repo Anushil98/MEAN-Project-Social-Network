@@ -1,0 +1,21 @@
+<header>
+  <a routerLink='/student/homepage'>
+    Profile
+  </a>
+</header>
+<form (submit)="OnAddPost(postForm)" #postForm="ngForm" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Add Post</h1>
+    <hr>
+
+    <label for="title"><b>Title</b></label>
+    <input type="text" ngModel placeholder="Enter the title" name="title" required #title="ngModel">
+
+    <label for="content"><b>Enter Content</b></label><br>
+    <textarea ngModel name="content" placeholder="Enter the content" rows=4 required #content="ngModel"></textarea>
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Add Post</button>
+    </div>
+  </div>
+</form>

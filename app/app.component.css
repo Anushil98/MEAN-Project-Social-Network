@@ -1,0 +1,20 @@
+.signup,.login {
+
+    background-color: white;
+    border-color:grey;
+    border-width: 1px;
+    border-bottom: 10px; 
+    size:40px;
+
+}
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}

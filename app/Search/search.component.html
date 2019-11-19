@@ -1,0 +1,24 @@
+<!-- <button (click)="test()">See friends Schema</button> -->
+<div>
+    <input id='search' type="text" [ngModel]="key" (ngModelChange)="Search($event)" placeholder="Search"><br>
+
+    <span *ngIf="noresult==1">Nothing to Show </span>
+    <div *ngFor="let j of results">
+        <div *ngFor="let i of j">
+            <table>
+                <tr >
+                    <td style="width: 20%;">
+                        <div style="height: 5rem;"><img [src]="i.profilepic" style="height: 100%;width: 80%;"></div>
+                    </td>
+                    <td style="width: 10%;">
+                        <p>{{i.username}}</p>
+                    </td>
+
+                    <td><button (click)='AddFriend(i.username)'>Add Friend</button></td>
+                    <!-- <td><button (click)='OnDelete(i.username)'>Delete User</button></td> -->
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

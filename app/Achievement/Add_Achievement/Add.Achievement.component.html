@@ -1,0 +1,29 @@
+<header>
+    <a routerLink='/student/homepage'>
+      Profile
+    </a>
+  </header>
+<form (submit)="OnAddAchievement(AchievementForm)" #AchievementForm="ngForm" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Add Achievement</h1>
+    <p>Please fill in the details.</p>
+    <hr>
+
+    <label for="Certi_no"><b>Certificate No:</b></label>
+    <input type="text" ngModel placeholder="Enter a certificate Number" name="Certi_no" required #Certi_no="ngModel">
+
+    <label for="Certi_name"><b>Certificate Name</b></label>
+    <input type="text" ngModel placeholder="Enter The Certificate Title" name="Certi_name" required
+      #Certi_name="ngModel">
+
+    <label for="Issuer"><b>Issued By:</b></label>
+    <input type="text" ngModel placeholder="Enter The Name of the Issuer" name="Issuer" required #Issuer="ngModel">
+
+    <label for="DOI"><b>Date Of Issue</b></label><br>
+    <input type="date" ngModel name="DOI" required #DOI="ngModel">
+
+    <div class="clearfix">
+      <button type="submit" class="Addbtn">Add Achievement</button>
+    </div>
+  </div>
+</form>

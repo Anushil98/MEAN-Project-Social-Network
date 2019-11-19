@@ -1,0 +1,43 @@
+<header>
+    <a routerLink='/student/homepage'>Profile</a>
+</header>
+
+<h1>Profile Picture Upload</h1>
+<button type="button" (click)="filepicker.click()">PICK FILE</button>
+<input type="file" #filepicker (change)="onFileSelected($event)" style="visibility: hidden;padding-bottom: 1rem;">
+<div class="image-preview" *ngIf="imagepreview !== '' && imagepreview" style="height: 5rem; padding-bottom: 1rem;">
+    <img [src]="imagepreview" style="height: 100%;">
+</div><br>
+<button type="button" (click)="onUpload()" (disabled)="imagepreview !== '' && imagepreview">UPLOAD</button>
+
+
+<h2>Additional Details about you</h2>
+<form (submit)='addDetails(form)' #form='ngForm'>
+
+    <div class="container">
+        <h3>Enter the details</h3>
+        <hr>
+
+        <label for="First_Name"><b>First Name</b></label>
+        <input type="text" ngModel placeholder="Enter the First Name" name="First_Name" required #First_Name="ngModel">
+
+        <label for="Last_Name"><b>Last Name</b></label>
+        <input type="text" ngModel placeholder="Enter the Last Name" name="Last_Name" required #Last_Name="ngModel">
+
+        <label for="Address"><b>Enter Address</b></label><br>
+        <textarea ngModel name="Address" placeholder="Enter the Address" rows=4 required #Address="ngModel"></textarea>
+        <label for="institute"><b>choose college</b></label>
+        <select name="institute" ngModel #institute='ngModel'>
+            <option *ngFor="let coll of colleges" [ngValue]="coll.id">
+                {{ coll.name }}
+            </option>
+        </select>
+        <br>
+        <br>
+        <label for=DOB><b>Enter Date Of Birth</b></label>
+        <input type='date' ngModel name="DOB" required #DOB="ngModel">
+        <div class="clearfix">
+            <button type="submit" class="signupbtn">Add</button>
+        </div>
+    </div>
+</form>

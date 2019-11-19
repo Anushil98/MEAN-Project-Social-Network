@@ -1,0 +1,59 @@
+<header *ngIf='prescol !== ""'>
+    <a routerLink='/college/addPost'>
+        Add Post
+    </a>
+    <a routerLink='/college/addProfessor'>
+        Add Professor
+    </a>
+    <a routerLink='/college/addDepartment'>
+        Add Department
+    </a>
+    <a routerLink='/college/seeDepartment'>
+        See Department
+    </a>
+    <a routerLink='/college/file/upload'>
+        Upload File
+    </a>
+</header>
+<header *ngIf='prescol === ""'>
+    <a routerLink='/student/homepage'>
+        Profile
+    </a>
+</header>
+<div class='First'>
+    <h2>Posts</h2>
+    <div class='post' *ngFor="let c of post">
+        <h3>{{c.title}}</h3>
+        <p>{{c.content}}</p>
+        <button (click)="like(c.id)">Like </button>
+        <p>{{c.likes}}</p>
+    </div>
+    <h2>Files</h2>
+    <div class='post' *ngFor="let c of file">
+        <p>{{c.Description}}</p>
+        <button (click)='onDownload(c.id)'>Download</button>
+    </div>
+</div>
+<div class='Second'>
+    <h2>Departments</h2>
+    <div class='department' *ngFor="let i of department">
+        <p>Name:{{i.dept_name}}</p>
+        <button (click)='getCourse(i.dept_id)'>Show Courses</button>
+        <div *ngIf='Dept === i.dept_id'>
+            <div class='course' *ngFor='let c of course'>
+                <h2>Course Name: {{c.name}}</h2>
+                <p>Credit Score: {{c.credit}}</p>
+                <p>Belong to {{c.semester}} Semester</p>
+                <h2>Faculty of this Course for the current year</h2>
+                <div *ngFor="let j of c.prof">
+                    <img [src]='j.prof_img' style="width: 20%;">
+                    <p><b>Full Name:{{j.First_Name}}</b> <span
+                            *ngIf="j.Middle_Name !== 'null'"><b>{{j.Middle_Name}}</b></span> <b>{{j.Last_Name}}</b>
+                    </p>
+                    <p>Designation: {{j.Designation}}</p>
+                    <p>Experience(in years):{{j.Experience}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

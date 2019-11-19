@@ -1,0 +1,15 @@
+<header>
+    <a routerLink='/student/homepage'>Profile</a>
+</header>
+
+<h1>File Upload</h1>
+<button type="button" (click)="filepicker.click()">PICK FILE</button>
+
+<input type="file" #filepicker (change)="onFileSelected($event)" style="visibility: hidden;padding-bottom: 1rem;">
+<br>
+<form (submit)='onUpload(form)' #form='ngForm'>
+    <label for='Description'>What does this file contain?</label>
+    <textarea ngModel name='Description' #Description='ngModel'></textarea>
+    <button type="submit" >UPLOAD</button>
+</form>
+

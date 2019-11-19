@@ -1,0 +1,24 @@
+<header>
+    <a routerLink='/college/addPost'>
+        Add Post
+    </a>
+    <a routerLink='/college/addProfessor'>
+        Add Professor
+    </a>
+    <a routerLink='/college/addDepartment'>
+        Add Department
+    </a>
+    <a routerLink='/college/seeDepartment'>
+        See Department
+    </a>
+    <a routerLink='/college/file/upload'>
+        Upload File
+    </a>
+</header>
+<h1>Posts</h1>
+<div *ngFor="let c of Post">
+    <h3>{{c.title}}</h3>
+    <p>{{c.content}}</p>
+    <button (click)="like(c.id)">Like </button>
+    <p>{{c.likes}}</p>
+</div>

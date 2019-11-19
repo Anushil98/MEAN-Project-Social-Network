@@ -1,0 +1,11 @@
+div:nth-child(even) {
+    background-color: lightgray;
+    margin: 10px;
+}
+
+div{
+    margin: 10px;
+}
+#cid{
+    font-weight: lighter;
+}

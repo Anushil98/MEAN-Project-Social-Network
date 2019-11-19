@@ -1,0 +1,35 @@
+#search{
+    width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+}
+table{
+    border: 1px solid lightgray;
+    width: 100%;
+}
+td{
+    border :1px solid whitesmoke;
+    width: 50.3%;
+    text-align: center;
+}
+div{
+    margin: auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 1rem;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 7rem;
+    opacity: 0.9;
+  }
+button:hover{
+    background-color: whitesmoke;
+    color: black;
+    
+}

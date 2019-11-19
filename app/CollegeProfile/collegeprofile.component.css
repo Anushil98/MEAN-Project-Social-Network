@@ -1,0 +1,26 @@
+a {
+    background-color:#4CAF50;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 1em;
+  }
+
+.post:nth-child(odd){
+    background-color: rgb(108, 243, 187);
+}
+.department:nth-child(odd){
+    background-color: rgb(108, 243, 187);
+}
+.course:nth-child(odd){
+    background-color: rgb(108, 243, 187);
+}
+.First{
+    float: right;
+    width: 50%;
+}
+.Second{
+    float: left;
+    width: 50%;
+}

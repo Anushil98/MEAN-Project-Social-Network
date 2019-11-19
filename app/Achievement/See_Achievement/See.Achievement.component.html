@@ -1,0 +1,7 @@
+<h1>Achivements</h1>
+    <div *ngFor="let c of Certi">
+        <h3>{{c.Certificate_Name}}</h3>
+        <p>{{c.Issued_By}}</p>
+        <p>{{c.Date_Of_Issue}}</p>
+        <p id="cid">Certificate Id:{{c.Certificate_no}}</p>        
+    </div>
